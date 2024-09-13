@@ -9,8 +9,9 @@ module.exports.loop = function () {
             console.log('Clearing non-existing creep memory:', name);
         }
     }
-    miner.check();
-    miner.duty_on();
+    
     ctrler.check();
     ctrler.duty_on();
+    miner.check();
+    miner.duty_on();
 }

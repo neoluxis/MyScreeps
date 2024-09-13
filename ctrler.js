@@ -26,7 +26,7 @@ var ctrler = {
      */
     check: function () {
         var miners = _.filter(Game.creeps, (creep) => creep.memory.role == 'ctrler');
-        if (miners.length < 4) {
+        if (miners.length < 8) {
             this.create(config.spawns[0], [WORK, CARRY, MOVE], 'ctrler');
         }
     },
@@ -45,8 +45,8 @@ var ctrler = {
             }
         } else {
             var sources = creep.room.find(FIND_SOURCES);
-            if (creep.harvest(sources[0]) == ERR_NOT_IN_RANGE) {
-                creep.moveTo(sources[0], { visualizePathStyle: { stroke: '#ffaa00' } });
+            if (creep.harvest(sources[1]) == ERR_NOT_IN_RANGE) {
+                creep.moveTo(sources[1], { visualizePathStyle: { stroke: '#ffaa00' } });
             }
             if (creep.store.getFreeCapacity() == 0) {
                 creep.memory.mineral_sufficient = true;
