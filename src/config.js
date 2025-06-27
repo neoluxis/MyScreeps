@@ -1,5 +1,5 @@
 var config = {
-    spawns: ['Spawn1'],
+    spawns: ['BaisDiune'],
 }
 
 module.exports = config;
